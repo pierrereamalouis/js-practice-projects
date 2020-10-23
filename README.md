@@ -1,1 +1,1 @@
-# JavaScrip Practice Projects
+# JavaScript Practice Projects
