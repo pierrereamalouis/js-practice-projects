@@ -1,14 +1,11 @@
 const [overlay, menuBars] = document.querySelectorAll('#overlay, #menu-bars');
-const navs = document.querySelectorAll('#nav-1, #nav-2, #nav-3, #nav-4, #nav-5');
+const navItems = document.querySelectorAll('#nav-1, #nav-2, #nav-3, #nav-4, #nav-5');
 
-function navAnimationIn(nav, index) {
-    nav.classList.remove(`slide-out-${index}`);
-    nav.classList.add(`slide-in-${index}`);
-}
-
-function navAnimationOut(nav, index) {
-    nav.classList.remove(`slide-in-${index}`);
-    nav.classList.add(`slide-out-${index}`);
+// Control Navigation Animation
+function navAnimation(direction1, direction2) {
+    navItems.forEach((nav, index) => {
+        nav.classList.replace(`slide-${direction1}-${index + 1}`, `slide-${direction2}-${index + 1}`);
+    });
 }
 
 function toggleNav() {
@@ -19,22 +16,21 @@ function toggleNav() {
     overlay.classList.toggle('overlay-active');
     if (overlay.classList.contains('overlay-active')) {
         // Animate In - Overlay
-        overlay.classList.remove('overlay-slide-left');
-        overlay.classList.add('overlay-slide-right');
+        overlay.classList.replace('overlay-slide-left', 'overlay-slide-right');
 
         // Animate IN - Nav Items
-        navs.forEach(navAnimationIn);
+        navAnimation('out', 'in');
     } else {
         // Animate Out - Overlay
         overlay.classList.replace('overlay-slide-right', 'overlay-slide-left');
         
         // Animate Out - Nav Items
-        navs.forEach(navAnimationOut);
+        navAnimation('in', 'out');
     }
 }
 
 // Event Listeners
 menuBars.addEventListener('click', toggleNav);
-navs.forEach(nav => {
+navItems.forEach(nav => {
     nav.addEventListener('click', toggleNav);
 });
