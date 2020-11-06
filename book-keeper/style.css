@@ -116,7 +116,10 @@ a:active {
   from {
     opacity: 0;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> bec7f954abb8959301efabe39970f3c75f9bc6f0
   to {
     opacity: 1;
   }
@@ -137,7 +140,10 @@ a:active {
   color: white;
   padding: 15px;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> bec7f954abb8959301efabe39970f3c75f9bc6f0
 h3 {
   margin: 0;
 }
@@ -171,11 +177,19 @@ button {
   color: white;
   background: var(--primary-color);
   height: 30px;
+<<<<<<< HEAD
   width: 100ox;
+=======
+  width: 100px;
+>>>>>>> bec7f954abb8959301efabe39970f3c75f9bc6f0
   border: none;
   border-radius: var(--border-radius);
   margin-top: 10px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> bec7f954abb8959301efabe39970f3c75f9bc6f0
 button:hover {
   filter: brightness(110%);
 }
@@ -183,6 +197,10 @@ button:hover {
 button:focus {
   outline: none;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> bec7f954abb8959301efabe39970f3c75f9bc6f0
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
   .container {
